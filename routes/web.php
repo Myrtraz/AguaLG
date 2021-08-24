@@ -14,3 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'HomeController@index')->name('index');
+Route::get('/nuestros-filtros', 'ProductCategoryController@usProducts')->name('usProducts');
+Route::get('/product-category/filtros', 'ProductCategoryController@filters')->name('filters');
+Route::get('/product-category/accesorios', 'ProductCategoryController@accessories')->name('accesories');
+Route::get('/product-category/termos', 'ProductCategoryController@thermos')->name('thermos');
+
+Route::get('/product/{name}', 'ProductCategoryController@getProduct')->name('getProduct');
+Route::get('/cart', 'OrderController@shoppingCart')->name('shoppingCart');
+Route::get('/checkout', 'OrderController@checkout')->name('checkout');

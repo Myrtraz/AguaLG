@@ -12,9 +12,9 @@
             
                 <div style="">
                     <div class="mx-3 py-3">
-                        <a href="https://wa.me/573022868697" target="__blank"><img src="images\icono-2.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                        <a href="https://www.instagram.com/agualogicfiltro/" target="__blank"><img src="images\icono-1.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                        <a href="https://www.facebook.com/Agualogicfiltro/" target="__blank"><img src="images\icono.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
+                        <a href="https://wa.me/573022868697"><img src="images\icono-2.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
+                        <a href="https://www.instagram.com/agualogicfiltro/"><img src="images\icono-1.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
+                        <a href="https://www.facebook.com/Agualogicfiltro/"><img src="images\icono.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
                         <a href="#" class="btn float-end" style="background: #479ad5;color: white;padding: .5rem;border-radius: 10px;text-decoration: none;display: inline-block;margin: 0.5rem 0;">
                             Ver todos nuestros filtros
                         </a>
@@ -37,51 +37,57 @@
                 <div class="col-12">
                     <div class="py-2"></div>
                     <div class="py-2">
-                        <div class="card" style="border-radius: 25px">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="images/filtro_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
-                                </div>
-                                <div class="col-6">
-                                    <div class="card-text py-2">
-                                        <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Filtros</h4>
-                                        <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                        <a href="{{ route('filters') }}" class="text-decoration-none">
+                            <div class="card" style="border-radius: 25px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/filtro_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text py-2">
+                                            <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Filtros</h4>
+                                            <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="py-1">
-                        <div class="card" style="border-radius: 25px">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="images/mesa_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
-                                </div>
-                                <div class="col-6">
-                                    <div class="card-text py-2">
-                                        <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Accesorios</h4>
-                                        <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                        <a href="{{ route('accesories') }}" class="text-decoration-none">
+                            <div class="card" style="border-radius: 25px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/mesa_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text py-2">
+                                            <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Accesorios</h4>
+                                            <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
 
                     <div class="py-2">
-                        <div class="card" style="border-radius: 25px">
-                            <div class="row">
-                                <div class="col-4">
-                                    <img src="images/termo_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
-                                </div>
-                                <div class="col-6">
-                                    <div class="card-text py-2">
-                                        <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Termos</h4>
-                                        <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                        <a href="{{ route('thermos') }}" class="text-decoration-none">
+                            <div class="card" style="border-radius: 25px">
+                                <div class="row">
+                                    <div class="col-4">
+                                        <img src="images/termo_reducido.jpg" width="80" height="80" class="mx-3 my-2" alt="" style="border-radius: 25px">
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="card-text py-2">
+                                            <h4 class="" style="font-size: 1.2em !important; font-weight: 600; color: #333; color: #607d8b;">Termos</h4>
+                                            <h3 class="" style="font-size: 1.4em !important;font-weight: 600;color: #333;font-weight: initial !important;">Encuentra tu modelo ideal</h3>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="py-2"></div>
                 </div>
@@ -183,12 +189,14 @@
     <div style="background-color: #cccccc !important">
         <div class="container">
             <div class="row">
-                <div class="col-12">
+                <div class="col-12 py-4">
                     <h2 style="font-size: 1.6em; text-align: center;">¿Quieres ser distribuidor?</h2>
 
-                    <a href="#" class="btn btn-outline-dark text-center">
-                        Saber más
-                    </a>
+                    <div class="text-center">
+                        <a href="#" class="btn btn-outline-dark">
+                            Saber más
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
