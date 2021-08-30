@@ -92,7 +92,7 @@
                 <div class="col-12">
                     <h5>Tambien te puede interesar</h5>
                     <div class="row">
-                        <div class="col-3" style="width: 25%">
+                        <div class="col-3" style="width: 50%">
                             <div>
                                 <div
                                     style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
@@ -106,7 +106,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3" style="width: 25%">
+                        <div class="col-3" style="width: 50%">
                             <div>
                                 <div
                                     style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
@@ -121,7 +121,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3" style="width: 25%">
+                        <div class="col-3" style="width: 50%">
                             <div>
                                 <div
                                     style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
@@ -135,7 +135,7 @@
                             </div>
                         </div>
 
-                        <div class="col-3" style="width: 25%">
+                        <div class="col-3" style="width: 50%">
                             <div>
                                 <div
                                     style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">

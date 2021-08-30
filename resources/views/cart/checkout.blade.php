@@ -31,7 +31,7 @@ input[type=number] {
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="form-group">
                     <label>Cedula <span class="text-danger">*</span></label>
                     <input type="number" class="form-control" name="document">
@@ -90,20 +90,22 @@ input[type=number] {
                 </div>
             </div>
 
-            <div class="col-6">
+            <div class="col-12">
                 <div class="" style="border: 1px solid rgba(0,0,0,.1)">
                     <div class="p-2 m-2" >
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-3">
-                                    <div class="" style="background-color: #fff; width: 90px; height: 90px;border-radius: 25px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
-                                        <img src="{{ asset('/images/Vidrio-Corrugado-1-e1617942772277.png') }}" width="80" height="80" style="border-radius: 25px;" alt="">
+                                <div class="col-3" >
+                                    <div class="" style="background-color: #fff; width: 70px;border-radius: 25px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
+                                        <img src="{{ asset('/images/Vidrio-Corrugado-1-e1617942772277.png') }}" width="100%" style="border-radius: 25px;" alt="">
                                     </div>
                                 </div>
                                 <div class="col-9">
-                                    <span>Unidad Peltre - Azul Jaspeado</span><br>
-                                    <span>$375,001 X1</span><br>
-                                    <span class="text-muted">$375,001</span>
+                                    <div class="mx-3">
+                                        <span class="mx-1">Unidad Peltre - Azul Jaspeado</span><br>
+                                        <span class="mx-1">$375,001 X1</span><br>
+                                        <span class="text-muted mx-1">$375,001</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -115,8 +117,8 @@ input[type=number] {
                                     </p>
                                 </div>
                                 <div class="col-9">
-                                    <p class="mx-3">
-                                        <b> <span>$</span>375,001 X1 </b>
+                                    <p class="mx-5">
+                                      <span class="text-center" style="font-weight: 600">$375,001 X1</span>
                                     </p>
                                 </div>
                             </div>
@@ -129,7 +131,7 @@ input[type=number] {
                                     </p>
                                 </div>
                                 <div class="col-9">
-                                    <p class="mx-3" style="font-weight: 600">
+                                    <p class="text-center mx-4" style="font-weight: 600">
                                         4-8 Días Hábiles
                                     </p>
                                 </div>
@@ -143,8 +145,8 @@ input[type=number] {
                                     </p>
                                 </div>
                                 <div class="col-9">
-                                    <p class="mx-3">
-                                        <b> <span>$</span>375,001 </b>
+                                    <p class="mx-3 text-center" style="font-weight: 600">
+                                        <span>$375,001</span>
                                     </p>
                                 </div>
                             </div>

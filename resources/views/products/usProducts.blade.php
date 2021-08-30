@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="row">
                         @foreach ($products as $product)
-                            <div class="col-3 mb-4" style="width: 33.3%">
+                            <div class="col-3 mb-4" style="width: 50%">
                                 <a href="{{ route('getProduct', ['name' => $product->name]) }}"
                                     class="text-decoration-none">
                                     <div>
@@ -29,7 +29,7 @@
                         <nav aria-label="Page navigation example">
                             <div class="row">
                                 <div class="col-3"></div>
-                                <div class="col-6">
+                                <div class="col-6 mx-2">
                                     <ul class="pagination">
                                         {!! $products->links() !!}
                                     </ul>

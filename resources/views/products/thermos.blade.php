@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="row">
                         @foreach ($thermos as $thermo)
-                            <div class="col-4" style="width: 33.3%">
+                            <div class="col-4" style="width: 50%">
                                 <a href="{{ route('getProduct', ['name' => $thermo->name]) }}"
                                     class="text-decoration-none">
                                     <div>

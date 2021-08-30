@@ -8,7 +8,7 @@
                 <div class="col-12">
                     <div class="row">
                         @foreach ($filters as $filter)
-                            <div class="col-3" style="width: 33.3%">
+                            <div class="col-3" style="width: 50%">
                                 <a href="{{ route('getProduct', ['name' => $filter->name]) }}"
                                     class="text-decoration-none">
                                     <div>
