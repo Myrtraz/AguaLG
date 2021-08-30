@@ -9,7 +9,7 @@ class ProductCategoryController extends Controller
 {
     public function usProducts()
     {
-        $products = Product::paginate(12);
+        $products = Product::paginate(8);
         return view('products.usProducts', compact('products'));
     }
 

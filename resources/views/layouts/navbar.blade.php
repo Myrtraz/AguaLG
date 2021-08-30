@@ -1,15 +1,22 @@
 <section>
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="{{ route('index') }}"><img src="{{ asset('/images/logo_reducido.png') }}" class="card-img-top" alt=""></a>
-            <div style="margin: 0px, padding: 0px">
-                <div class="mx-3">
-                    <a href="https://wa.me/573022868697" target="__blank"><img src="{{ asset('images\icono-2.png') }}" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                    <a href="https://www.instagram.com/agualogicfiltro/" target="__blank"><img src="{{ asset('images\icono-1.png') }}" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                    <a href="https://www.facebook.com/Agualogicfiltro/" target="__blank"><img src="{{ asset('images\icono.png') }}" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                    
-                </div>
+            <div class="">
+                <a class="navbar-brand" href="{{ route('index') }}">
+                    <img src="{{ asset('/images/logo_reducido.png') }}" style="width: 100%;" alt="">
+                </a>
+            </div>
+            <div class="text-center" style="width: 100%">
+                <a href="https://wa.me/573022868697" class="text-decoration-none text-dark">
+                    <i class="fab fa-whatsapp" style="font-size: 32px;"></i>
+                </a>
+                <a href="https://www.instagram.com/agualogicfiltro/" class="text-decoration-none text-dark">
+                    <i class="fab fa-instagram" style="font-size: 32px;"></i>
+                </a>
+                <a href="https://www.facebook.com/Agualogicfiltro/" class="text-decoration-none text-dark">
+                    <i class="fab fa-facebook" style="font-size: 32px;"></i>
+                </a>
             </div>
         </div>
-      </nav>
+    </nav>
 </section>

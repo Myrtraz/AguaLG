@@ -7,15 +7,22 @@
         <div class="row">
             <div class="col-12">
                 <div class="">
-                    <img src="images\fotos-ambientadas-agualogic.jpg" width="1140" height="620" alt="">
+                    <img src="images\fotos-ambientadas-agualogic.jpg" width="100%" height="100%" alt="">
                 </div>
             
-                <div style="">
-                    <div class="mx-3 py-3">
-                        <a href="https://wa.me/573022868697"><img src="images\icono-2.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                        <a href="https://www.instagram.com/agualogicfiltro/"><img src="images\icono-1.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                        <a href="https://www.facebook.com/Agualogicfiltro/"><img src="images\icono.png" width="32" height="32" alt="" class="mx-2 text-decoration-none"></a>
-                        <a href="#" class="btn float-end" style="background: #479ad5;color: white;padding: .5rem;border-radius: 10px;text-decoration: none;display: inline-block;margin: 0.5rem 0;">
+                <div style="row">
+                        <a href="https://wa.me/573022868697" class="text-decoration-none text-dark" style="">
+                            <i class="fab fa-whatsapp" style="font-size: 32px;"></i>
+                        </a>
+                        <a href="https://www.instagram.com/agualogicfiltro/" class="text-decoration-none text-dark">
+                            <i class="fab fa-instagram" style="font-size: 32px;"></i>
+                        </a>
+                        <a href="https://www.facebook.com/Agualogicfiltro/" class="text-decoration-none text-dark">
+                            <i class="fab fa-facebook" style="font-size: 32px;"></i>
+                        </a>                    
+
+                    <div class="float-end">
+                        <a href="#" class="btn" style="background: #479ad5;color: white;padding: .5rem; border-radius: 10px; text-decoration: none;  margin: 0.5rem 0;">
                             Ver todos nuestros filtros
                         </a>
                     </div>
@@ -101,7 +108,7 @@
             <div class="col-12">
                 <div class="py-3">
                     <div class="text-center">
-                        <iframe width="675" height="379" src="https://www.youtube.com/embed/uj43MIlYtAo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/uj43MIlYtAo?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
                     </div>
                 </div>
             </div>
@@ -111,61 +118,54 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="">
                 <h5>Más vendidos</h5>
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-3" style="width: 25%">
                         <div>
-                            <div style="background-color: #fff; height: 180px; width: 180px; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Vidrio-Corrugado-1-e1617942772277.png" width="180" height="180" alt="">
+                                    <img src="images/Vidrio-Corrugado-1-e1617942772277.png" width="100%" height="40%" alt="">
                                 </div>
                             </div>
-                            <span>$
-                                <span>489,000.00</span>
-                            </span>
+                            <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad Vidrio Corrugado</h2>
                         </div>
                     </div>
     
-                    <div class="col-3">
+                    <div class="col-3" style="width: 25%">
                         <div>
-                            <div style="background-color: #fff; height: 180px; width: 180px; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/AZUL-JASPEADO-e1617942876146.png" width="180" height="180" alt="">
+                                    <img src="images/AZUL-JASPEADO-e1617942876146.png" width="100%" height="40%" alt="">
                                 </div>
                             </div>
-                            <span>$
-                                <span>375,000.00</span>
-                            </span>
+                            
+                            <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad Peltre - Azul Jaspeado</h2>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3" style="width: 25%">
                         <div>
-                            <div style="background-color: #fff; height: 180px; width: 180px; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Turquesa-e1617942161513.png" width="180" height="180" alt="">
+                                    <img src="images/Turquesa-e1617942161513.png" width="100%" height="40%" alt="">
                                 </div>
                             </div>
-                            <span>$
-                                <span>375,000.00</span>
-                            </span>
+                            <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad Peltre - Azul Turquesa</h2>
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-3" style="width: 25%">
                         <div>
-                            <div style="background-color: #fff; height: 180px; width: 180px; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Plastico-1-e1617942847158.png" width="180" height="180" alt="">
+                                    <img src="images/Plastico-1-e1617942847158.png" width="100%" height="40%" alt="">
                                 </div>
                             </div>
-                            <span>$
-                                <span>165,900.00</span>
-                            </span>
+                            <span style="font-size: 0.8rem !important; color: #666;">$165,900.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad plastica - Blanco</h2>
                         </div>
                     </div>
