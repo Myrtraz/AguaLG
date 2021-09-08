@@ -14,15 +14,23 @@ input::-webkit-inner-spin-button {
 input[type=number] {
   -moz-appearance: textfield;
 }
+
+    .input-form {
+        border: 2px solid #607d8b !important;
+        border-radius: 10px !important;
+        height: 2.2rem !important;
+        font-size: 1.1rem !important;
+        outline: none !important;
+    }
 </style>
 <section class="py-2">
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="card p-0 m-0" style="background-color: #edbb17">
-                    <span>Ten en cuenta antes de realizar tu compra que nuestra operación continúa de manera normal en Bogotá, ciudades principales del país y algunos municipios aledaños a estas locaciones.</span>
-                    <span>Si necesitas validar cobertura y costo de envío cercanos a tu localización, puedes comunicarte a los teléfonos 320 444 1550 – 350 446 6093 – 300 258 9820 – 302 286 8697.</span>
-                    <span>Agradecemos de antemano tu comprensión y confianza en nuestros productos.</span>
+                <div class="card" style="background-color: #edbb17; padding: 0px; margin: 0px;">
+                    <span style="">Ten en cuenta antes de realizar tu compra que nuestra operación continúa de manera normal en Bogotá, ciudades principales del país y algunos municipios aledaños a estas locaciones.</span>
+                    <span style="">Si necesitas validar cobertura y costo de envío cercanos a tu localización, puedes comunicarte a los teléfonos 320 444 1550 – 350 446 6093 – 300 258 9820 – 302 286 8697.</span>
+                    <span style="">Agradecemos de antemano tu comprensión y confianza en nuestros productos.</span>
                 </div>
             </div>
         </div>
@@ -34,36 +42,36 @@ input[type=number] {
             <div class="col-12">
                 <div class="form-group">
                     <label>Cedula <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" name="document">
+                    <input type="number" class="form-control input-form" name="document">
                 </div>
 
                 <div class="form-group">
                     <div class="row">
                         <div class="col-6">
                             <label>Nombre <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="first_name">
+                            <input type="text" class="form-control input-form" name="first_name">
                         </div>
 
                         <div class="col-6">
                             <label>Apellido <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" name="last_name">
+                            <input type="text" class="form-control input-form" name="last_name">
                         </div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Company name <span>(optional)</span></label>
-                    <input type="text" class="form-control" name="company_name">
+                    <input type="text" class="form-control input-form" name="company_name">
                 </div>
 
                 <div class="form-group">
                     <label>Street address <span class="text-danger">*</span></label>
-                    <input type="text" class="form-control" name="street">
+                    <input type="text" class="form-control input-form" name="street">
                 </div>
 
                 <div class="form-group">
                     <label>State / County <span class="text-danger">*</span></label>
-                    <select name="state" id="state" class="form-control">
+                    <select name="state" id="state" class="form-control input-form">
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
@@ -72,7 +80,7 @@ input[type=number] {
                 
                 <div class="form-group">
                     <label>Town / City <span class="text-danger">*</span></label>
-                    <select name="city" id="city" class="form-control">
+                    <select name="city" id="city" class="form-control input-form">
                         <option value="">1</option>
                         <option value="">2</option>
                         <option value="">3</option>
@@ -81,12 +89,12 @@ input[type=number] {
 
                 <div class="form-group">
                     <label>Phone <span class="text-danger">*</span></label>
-                    <input type="number" class="form-control" name="telephone">
+                    <input type="number" class="form-control input-form" name="telephone">
                 </div>
                 
                 <div class="form-group">
                     <label>Email address <span class="text-danger">*</span></label>
-                    <input type="email" class="form-control" name="email">
+                    <input type="email" class="form-control input-form" name="email">
                 </div>
             </div>
 
@@ -95,7 +103,7 @@ input[type=number] {
                     <div class="p-2 m-2" >
                         <div class="form-group mb-3">
                             <div class="row">
-                                <div class="col-3" >
+                                <div class="col-3">
                                     <div class="" style="background-color: #fff; width: 70px;border-radius: 25px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
                                         <img src="{{ asset('/images/Vidrio-Corrugado-1-e1617942772277.png') }}" width="100%" style="border-radius: 25px;" alt="">
                                     </div>
@@ -155,8 +163,8 @@ input[type=number] {
                 </div>
                 <div class="mb-3 form-check">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                    <label class="form-check-label" for="exampleCheck1">
-                        I have read and agree to the website terms and conditions <span class="text-danger">*</span>
+                    <label class="form-check-label" for="exampleCheck1" style="color: #607d8b !important; font-size: 1.2rem">  
+                        I have read and agree to the website <a href="#">terms and conditions</a> <span class="text-danger">*</span>
                     </label>
                 </div>
                 <div class="d-grid gap-2">

@@ -16,38 +16,43 @@
 <section>
     <div class="container">
         <div class="row">
-            <div class="col-6">
+            <div class="col-12">
                 <div class="row">
-                    <div class="col-12">
-                        <div style="background-color: #fff; width: 80%">
-                            <img src="{{ asset('/images/AZUL-JASPEADO-e1617942876146.png') }}" alt="" style="border-radius: 25px; width: 80%;">
-                            <i class="fas fa-times-circle" style="vertical-align: top"></i>
+                    <div class="form-group mb-3">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="" style="background-color: #fff; width: 70px;border-radius: 25px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
+                                    <img src="{{ asset('/images/AZUL-JASPEADO-e1617942876146.png') }}" width="100%" style="border-radius: 25px;" alt="">
+                                </div>
+                            </div>
+                            <div class="col-9">
+                                <div class="mx-3">
+                                    <span class="mx-1">Unidad Peltre - Azul Jaspeado</span><br>
+                                    <span class="mx-1">$375,001 X1</span><br>
+                                </div>
+                            </div>
+                            
                         </div>
-                    </div>
-                    <div class="col-12">
-                        <h5>
-                            <span>Unidad Peltre - Azul Jaspeado</span>
-                            <br>
-                            <span>
-                                $ <span>375.001</span> <span>X1</span>
-                            </span>
-                        </h5>
+                        <i class="fas fa-times-circle float-end" style="vertical-align: top"></i>
                     </div>
                 </div>
             </div>
-            <div class="col-6 mb-2">
+            <div class="col-12 mb-2">
                 <h3>
                     <span class="text-muted h3">Resumen</span>
                     <br>
-                    <span>Subtotal:</span>
-                    <span>$ <span> 375.001</span>
+                    <span>Subtotal:</span><br>
+                    <span>$375.001</span>
                     </span>
                 </h3>
-                <small class="text-muted">En el siguiente paso se calculan los costos de envío segun su direción.</small>
-                <div class="d-grid gap-2">
+                <small class="text-muted mb-2">En el siguiente paso se calculan los costos de envío segun su direción.</small>
+                <div class="d-grid gap-2 py-2">
                     <a href="{{ route('checkout') }}" class="btn btn-secondary btn-lg" style="background: #607d8b !important;border-radius: 10px !important;">Continuar</a>
                 </div>
             </div>
+        </div>
+
+        <div class="text-center my-2">
             <a href="{{ route('usProducts') }}" class="text-decoration-none p-2 text-center btn-lg" style="background-color: #dfdcde;color: #515151;border-radius: 10px;">
                 Ver todos nuestros productos
             </a>
