@@ -115,42 +115,48 @@
         </div>
     </div>
 </section>
-<section>
+<section class="py-3">
     <div class="container">
         <div class="row">
-            <div class="">
-                <h5>Más vendidos</h5>
+            <div class="col-12">
+                <h5 class="mb-4">Más vendidos</h5>
                 <div class="row">
-                    <div class="col-3" style="width: 25%">
+                    <div class="col-3" style="width: 50%">
                         <div>
-                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div
+                                style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Vidrio-Corrugado-1-e1617942772277.png" width="100%" height="40%" alt="">
+                                    <img src="{{ asset('images/Vidrio-Corrugado-1-e1617942772277.png') }}"
+                                        width="100%" height="40%" alt="">
                                 </div>
                             </div>
                             <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad Vidrio Corrugado</h2>
                         </div>
                     </div>
-    
-                    <div class="col-3" style="width: 25%">
+
+                    <div class="col-3" style="width: 50%">
                         <div>
-                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div
+                                style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/AZUL-JASPEADO-e1617942876146.png" width="100%" height="40%" alt="">
+                                    <img src="{{ asset('images/AZUL-JASPEADO-e1617942876146.png') }}" width="100%"
+                                        height="40%" alt="">
                                 </div>
                             </div>
-                            
+
                             <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
                             <h2 style="font-size: 0.8rem !important; color: #666;">Unidad Peltre - Azul Jaspeado</h2>
                         </div>
                     </div>
 
-                    <div class="col-3" style="width: 25%">
+                    <div class="col-3" style="width: 50%">
                         <div>
-                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div
+                                style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Turquesa-e1617942161513.png" width="100%" height="40%" alt="">
+                                    <img src="{{ asset('images/Turquesa-e1617942161513.png') }}" width="100%"
+                                        height="40%" alt="">
                                 </div>
                             </div>
                             <span style="font-size: 0.8rem !important; color: #666;">$375,000.00</span>
@@ -158,11 +164,13 @@
                         </div>
                     </div>
 
-                    <div class="col-3" style="width: 25%">
+                    <div class="col-3" style="width: 50%">
                         <div>
-                            <div style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                            <div
+                                style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
                                 <div>
-                                    <img src="images/Plastico-1-e1617942847158.png" width="100%" height="40%" alt="">
+                                    <img src="{{ asset('images/Plastico-1-e1617942847158.png') }}" width="100%"
+                                        height="40%" alt="">
                                 </div>
                             </div>
                             <span style="font-size: 0.8rem !important; color: #666;">$165,900.00</span>
@@ -174,7 +182,7 @@
         </div>
     </div>
 </section>
-<section class="py-4">
+<section class="py-3">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -185,7 +193,7 @@
         </div>
     </div>
 </section>
-<section class="py-3">
+<section class="py-2">
     <div style="background-color: #cccccc !important">
         <div class="container">
             <div class="row">

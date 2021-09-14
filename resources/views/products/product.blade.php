@@ -18,75 +18,87 @@
     <section>
         <div class="container">
             <div class="row">
-                <div class="col-6">
+                <div class="col-12">
                     <img src="{{ $product->cover }}" width="100%" alt="">
                 </div>
-                <div class="col-6">
-                    <div class="">
-                        <h1 class="p-0 m-0" style="color: #666">{{ $product->name }}</h1>
-                        <span class="h3">${{ $product->price }}</span>
-                        <div class="mb-4"></div>
+                <div class="col">
+                    <h1 class=" p-0 m-0" style="color: #666">{{ $product->name }}
+                    </h1>
+                    <span class="h3">${{ $product->price }}</span>
+                    <div class="mb-4"></div>
 
-                        <form action=""
-                            style="background: initial !important; border: initial !important;border-radius: initial !important;margin: 1rem 0 !important;">
-                            @csrf
-                            <div class="mb-5">
-                                <div style="background: white;border: 2px solid #607d8b;border-radius: 10px;width: 100%;">
-                                    <div class="row">
-                                        <div class="col-4">
-                                            <a href="#" class="text-secondary">
-                                                <i class="fas fa-minus text-gray mx-2" style="vertical-align: middle;"></i>
-                                            </a>
-                                        </div>
-                                        <div class="col-4">
-                                            <div class="" style="float: initial !important;
-                                                        display: inline-block !important;">
-                                                <input type="number" step="1" min="1" max="5" name="quantity" value="1"
-                                                    title="qty" size="4" placeholder="" inputmode="numeric">
+                    <form action="{{ route('add_cart') }}"
+                        style="background: initial !important; border: initial !important;border-radius: initial !important;">
+                        @csrf
+                        <input type="hidden" name="pid" value="{{ $product->id }}">
+                        <div class="mb-3">
+                            <div style="background: white;border: 2px solid #607d8b;border-radius: 10px; width: 100%;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="row">
+                                            <div class="col-4">
+                                                <a href="#" class="text-secondary">
+                                                    <i class="fas fa-minus mx-2 py-2"
+                                                        style="vertical-align: middle; font-size: 20px; color: #607d8b"></i>
+                                                </a>
+                                            </div>
+                                            <div class="col-4">
+                                                <div class="" style=" float: initial !important; display: inline-block
+                                                    !important;">
+                                                    <input type="number" class="" step=" 1" min="1" max="5"
+                                                        name="quantity" value="1" title="qty" size="4" placeholder=""
+                                                        inputmode="numeric" style="font-size: 20px; color: #607d8b">
+                                                </div>
+                                            </div>
+                                            <div class="col-4">
+                                                <a href="#" class="text-secondary">
+                                                    <i class="fas fa-plus text-gray py-2"
+                                                        style="vertical-align: middle; font-size: 20px"
+                                                        style=" color: #607d8b"></i>
+                                                </a>
                                             </div>
                                         </div>
-                                        <div class="col-4">
-                                            <a href="#" class="text-secondary">
-                                                <i class="fas fa-plus text-gray" style="vertical-align: middle;"></i>
-                                            </a>
-                                        </div>
                                     </div>
+                                    <div class="col-6">
+                                        <button type="submit" class="text-decoration-none btn bg-lg py-1"
+                                            style="border: 2px solid #607d8b; width: 100%; background-color: #607d8b; color: #fff; padding: 2rem;">
+                                            Comprar
+                                        </button>
+                                    </div>
+
                                 </div>
-                                <div class="mb-1"></div>
-                                <a href="{{ route('shoppingCart') }}" class="text-decoration-none btn bg-lg"
-                                    style="border: 2px solid #607d8b;border-radius: 10px !important; width: 100%; background-color: #607d8b; color: #fff; padding: .5rem;">
-                                    Comprar
-                                </a>
                             </div>
-                    </div>
+                        </div>
                     </form>
                 </div>
 
-                <div class="mb-2">
-                    <div style="background: #4caf50;color: #fff;text-align: center; border-radius: 10px; align-vertical: middle;">
-                        <p class="py-2" style="font-weight: 600;">Envio gratis en Bogotá <i class="fas fa-shipping-fast"></i></p>
-                    </div>
-                    <span class="text-muted">
-                        Envío incluido solo para filtros en la ciudad de Bogotá – Colombia.
-                        Contáctenos a través de nuestros canales de servicio al cliente
-                        para conocer el valor de su envío fuera de la ciudad de Bogotá.
-                    </span>
+                <div class="">
+                    <div style=" background: #4caf50;color: #fff;text-align: center;
+                    border-radius: 10px; align-vertical: middle;">
+                    <p class="py-2" style="font-weight: 600;">Envio gratis en Bogotá <i
+                            class="fas fa-shipping-fast"></i></p>
                 </div>
+                <span class="text-muted">
+                    Envío incluido solo para filtros en la ciudad de Bogotá – Colombia.
+                    Contáctenos a través de nuestros canales de servicio al cliente
+                    para conocer el valor de su envío fuera de la ciudad de Bogotá.
+                </span>
+            </div>
 
-                <div class="mb-2">
-                    <span>Fabricado en acero al carbono revestido con una cubierta vítrea en color
-                        (interior/exterior).</span>
-                    <span>Incluye: Unidad de almacenamiento peltre, tapa, filtro cerámico, grifo dispensador en acero
-                        inoxidable.</span>
-                    <span>Capacidad de 20 litros, incluyendo volumen del filtro cerámico.</span>
-                    <span>Dimensiones aproximadas: 42 cm Alto – 32,5 cm diámetro.</span>
-                    <span>Peso: 7 kilogramos aproximadamente.</span>
-                </div>
+            <div class="mb-2">
+                <span>Fabricado en acero al carbono revestido con una cubierta vítrea en color
+                    (interior/exterior).</span>
+                <span>Incluye: Unidad de almacenamiento peltre, tapa, filtro cerámico, grifo dispensador en acero
+                    inoxidable.</span>
+                <span>Capacidad de 20 litros, incluyendo volumen del filtro cerámico.</span>
+                <span>Dimensiones aproximadas: 42 cm Alto – 32,5 cm diámetro.</span>
+                <span>Peso: 7 kilogramos aproximadamente.</span>
             </div>
         </div>
         </div>
+        </div>
     </section>
-    <section>
+    <section class="py-3">
         <div class="container">
             <div class="row">
                 <div class="col-12">

@@ -13,7 +13,7 @@
 </head>
 <body style="background-color: @yield('background', '#eee')">
     @include('layouts.navbar')
-
+    @include('layouts.errors')
     @yield('body')
 
     @include('layouts.footer')

@@ -21,4 +21,6 @@ Route::get('/product-category/termos', 'ProductCategoryController@thermos')->nam
 
 Route::get('/product/{name}', 'ProductCategoryController@getProduct')->name('getProduct');
 Route::get('/cart', 'OrderController@shoppingCart')->name('shoppingCart');
+Route::get('/add_cart', 'OrderController@addCart')->name('add_cart');
 Route::get('/checkout', 'OrderController@checkout')->name('checkout');
+Route::post('/create', 'OrderController@order')->name('create');
