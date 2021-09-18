@@ -23,14 +23,14 @@
                                 <div class="col-3">
                                     <div class="" style=" background-color: #fff; width: 70px;border-radius: 25px;
                                         box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
-                                        <img src="{{ $product->cover }}" width="100%" style="border-radius: 25px;" alt="">
+                                        <img src="{{ $product->product_cover }}" width="100%" style="border-radius: 25px;" alt="">
                                     </div>
                                 </div>
                                 <div class="col-9">
                                     <div class="mx-3">
-                                        <span class="mx-1">{{ $product->name }}</span><br>
-                                        <span class="mx-1">{{ $product->price }}
-                                            X{{ $qty }}</span><br>
+                                        <span class="mx-1">{{ $product->product_name }}</span><br>
+                                        <span class="mx-1">{{ $product->product_price }}
+                                            X{{ $product->product_qty }}</span><br>
                                     </div>
                                 </div>
 
@@ -38,17 +38,17 @@
                             <i class="fas fa-times-circle float-end"
                                 style=" background: #fff;color: #ec8571 !important;"></i>
                         </div>
+                        @endforeach
                         <div class="">
                             <h3>
                                 <span style=" color:
                             #666 !important; font-size: 20px">Resumen</span>
                             <br>
                             <span style="color: #333 !important; font-size: 30px;">Subtotal:</span><br>
-                            <span style="color: #333 !important">${{ $product->price }}</span>
+                            <span style="color: #333 !important; font-size: 30px;">${{ $subtotal }}</span>
                             </span>
                             </h3>
                         </div>
-                    @endforeach
                 </div>
                 <div class=" mb-2">
                     <small class="mb-2" style="color: #607d8b !important">En el siguiente paso se calculan los

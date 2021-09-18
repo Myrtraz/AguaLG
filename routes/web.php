@@ -20,7 +20,8 @@ Route::get('/product-category/accesorios', 'ProductCategoryController@accessorie
 Route::get('/product-category/termos', 'ProductCategoryController@thermos')->name('thermos');
 
 Route::get('/product/{name}', 'ProductCategoryController@getProduct')->name('getProduct');
-Route::get('/cart', 'OrderController@shoppingCart')->name('shoppingCart');
-Route::get('/add_cart', 'OrderController@addCart')->name('add_cart');
+Route::get('/cart', 'ShoppingCartController@shoppingCart')->name('shoppingCart');
+Route::get('/add_cart', 'ShoppingCartController@addCart')->name('add_cart');
+Route::post('/remove_cart', 'ShoppingCartController@removeCart')->name('remove_cart');
 Route::get('/checkout', 'OrderController@checkout')->name('checkout');
 Route::post('/create', 'OrderController@order')->name('create');

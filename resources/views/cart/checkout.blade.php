@@ -104,23 +104,24 @@ input[type=number] {
                 <div class="col-12">
                     <div class="" style="border: 1px solid rgba(0,0,0,.1)">
                         <div class="p-2 m-2" >
-                            @foreach ($products as $product)
+                            @foreach ($checkouts as $checkout)
                             <div class="form-group mb-3">
                                 <div class="row">
                                     <div class="col-3">
                                         <div class="" style="background-color: #fff; width: 70px;border-radius: 25px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important;">
-                                            <img src="{{ $product->cover }}" width="100%" style="border-radius: 25px;" alt="">
+                                            <img src="{{ $checkout->product_cover }}" width="100%" style="border-radius: 25px;" alt="">
                                         </div>
                                     </div>
                                     <div class="col-9">
                                         <div class="mx-3">
-                                            <span class="mx-1">{{ $product->name }}</span><br>
-                                            <span class="mx-1">${{ $product->price }} X{{ $qty}}</span><br>
-                                            <span class="text-muted mx-1">${{ $product->price }}</span>
+                                            <span class="mx-1">{{ $checkout->product_name }}</span><br>
+                                            <span class="mx-1">${{ $checkout->product_price }} X{{ $checkout->product_qty}}</span><br>
+                                            <span class="text-muted mx-1">${{ $checkout->product_price }}</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            @endforeach
                             <div class="form-group" style="border-top: 1px solid rgba(0,0,0,.1); border-bottom: 1px solid rgba(0,0,0,.1); ">
                                 <div class="row">
                                     <div class="col-3">
@@ -129,8 +130,8 @@ input[type=number] {
                                         </p>
                                     </div>
                                     <div class="col-9">
-                                        <p class="mx-5">
-                                          <span class="text-center" style="font-weight: 600">${{ $product->price }} X{{ $qty}}</span>
+                                        <p class="mx-4">
+                                          <span class="text-center" style="font-weight: 600">${{ $subtotal }}</span>
                                         </p>
                                     </div>
                                 </div>
@@ -158,12 +159,11 @@ input[type=number] {
                                     </div>
                                     <div class="col-9">
                                         <p class="mx-3 text-center" style="font-weight: 600">
-                                            <span>${{ $product->price }}</span>
+                                            <span>${{ $subtotal }}</span>
                                         </p>
                                     </div>
                                 </div>
                             </div>
-                            @endforeach
                         </div>
                     </div>
                     <div class="mb-3 form-check py-3">
