@@ -53,6 +53,6 @@ class MailController extends Controller
 
         $pdf = \PDF::loadView('bill.pdf', compact('user','myOrder', 'address'));
 
-        return $pdf->download('checkout.pdf');
+        return $pdf->stream('checkout.pdf');
     }
 }
