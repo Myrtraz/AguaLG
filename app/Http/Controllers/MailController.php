@@ -49,6 +49,7 @@ class MailController extends Controller
         $address = Address::where('uid', $uid)->first();
         $myOrder = DB::table('checkouts')
         ->select('checkouts.*','shopping_carts.*')->join('shopping_carts','shopping_carts.uid','=','checkouts.uid')
+        ->where('shopping_carts.uid', $uid)
         ->get();
 
         $pdf = \PDF::loadView('bill.pdf', compact('user','myOrder', 'address'));
