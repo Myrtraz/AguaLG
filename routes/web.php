@@ -25,3 +25,6 @@ Route::get('/add_cart', 'ShoppingCartController@addCart')->name('add_cart');
 Route::post('/remove_cart', 'ShoppingCartController@removeCart')->name('remove_cart');
 Route::get('/checkout', 'OrderController@checkout')->name('checkout');
 Route::post('/create', 'OrderController@order')->name('create');
+Route::get('/congratulations/{uid}', 'MailController@congratulations')->name('congratulations');
+Route::name('printPDF')->get('/imprimir/{uid}', 'MailController@printPDF');
+Route::get('/pdf', 'MailController@showpdf')->name('showpdf');

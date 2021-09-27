@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\OrderRequest; 
 use App\Models\Product;
 use App\Models\Checkout;
 use App\Models\Address;
@@ -18,16 +19,17 @@ class OrderController extends Controller
         $uid = hash('ripemd160', $request->session()->token());
 
         $checkouts = shoppingCart::where('uid', $uid)->get();
-        $subtotal =  DB::table('shopping_carts')->sum(DB::raw('shopping_carts.product_price * shopping_carts.product_qty'));
+        $subtotal =  DB::table('shopping_carts')->where('uid', $uid)->sum(DB::raw('shopping_carts.product_price * shopping_carts.product_qty'));
         return view('cart.checkout', compact('checkouts','qty', 'uid', 'pid', 'subtotal'));
     }
 
-    public function order(Request $request)
+    public function order(OrderRequest $request)
     {
         $pid = $request->pid;
         $uid = hash('ripemd160', $request->session()->token());
         $checkout = shoppingCart::where('uid', $uid)->get();
-        
+        $qty = $request->qty;
+
         foreach($checkout as $item) {
             Checkout::create([
                 'uid' => $uid,
@@ -39,7 +41,19 @@ class OrderController extends Controller
                 'phone' => $request->phone,
                 'company_name' => $request->company_name,
             ]);
+
+            /*
+                Product::where('id', $item->product->id)
+                    ->update([
+                        'stock' => $item->product->stock - $qty
+                ]);
+            */
         }
+
+        ShoppingCart::where('uid', $uid)
+            ->update([
+                'is_ordered' => true
+            ]);
 
         $address = Address::create([
             'uid' => $uid,
@@ -48,6 +62,6 @@ class OrderController extends Controller
             'city' => $request->city,
         ]);
 
-        return redirect()->route('index');
+        return redirect()->route('congratulations', compact('uid'));
     }
 }

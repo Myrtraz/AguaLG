@@ -14,5 +14,6 @@ class ShoppingCart extends Model
         'product_price',
         'product_qty',
         'product_cover',
+        'is_ordered'
     ];
 }

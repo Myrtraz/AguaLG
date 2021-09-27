@@ -22,6 +22,7 @@ class CreateShoppingCartsTable extends Migration
             $table->integer('product_price');
             $table->integer('product_qty');
             $table->string('product_cover');
+            $table->boolean('is_ordered');
             $table->timestamps();
         });
     }

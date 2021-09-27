@@ -26,6 +26,7 @@ class ShoppingCartController extends Controller
             'product_price'=> $product->price,
             'product_qty'=> $request->quantity,
             'product_cover'=> $product->cover,
+            'is_ordered' => false
         ]);
 
         return redirect()->route('shoppingCart', compact('uid', 'qty', 'pid'));
@@ -38,7 +39,7 @@ class ShoppingCartController extends Controller
         $uid = hash('ripemd160', $request->session()->token());
 
         $products = shoppingCart::where('uid', $uid)->get();
-        $subtotal =  DB::table('shopping_carts')->sum(DB::raw('shopping_carts.product_price * shopping_carts.product_qty'));
+        $subtotal =  DB::table('shopping_carts')->where('uid', $uid)->sum(DB::raw('shopping_carts.product_price * shopping_carts.product_qty'));
         return view('cart.shoppingCart', compact('products', 'qty', 'uid', 'pid', 'subtotal'));
     }
 
