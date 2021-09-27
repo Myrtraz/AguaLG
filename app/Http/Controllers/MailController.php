@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Mail\OrderReceived;
 use App\Models\Checkout;
 use App\Models\ShoppingCart;
+use App\Models\Address;
 use Mail;
 use PDF;
 use DB;
@@ -28,18 +29,29 @@ class MailController extends Controller
         return view('cart.congratulations');
     }
 
-    public function showpdf()
+    public function showpdf(Request $request)
     {
-        return view('bill.pdf');
+        $uid = hash('ripemd160', $request->session()->token());
+        $user = Checkout::where('uid', $uid)->first();
+        $address = Address::where('uid', $uid)->first();
+        $myOrder = DB::table('checkouts')
+        ->select('checkouts.*','shopping_carts.*')->join('shopping_carts','shopping_carts.uid','=','checkouts.uid')
+        ->where('shopping_carts.uid', $uid)
+        ->get();
+
+        return view('bill.pdf', compact('user','myOrder', 'address'));
     }
 
     public function printPDF(Request $request, $uid)
     {
+        $uid = hash('ripemd160', $request->session()->token());
+        $user = Checkout::where('uid', $uid)->first();
+        $address = Address::where('uid', $uid)->first();
         $myOrder = DB::table('checkouts')
         ->select('checkouts.*','shopping_carts.*')->join('shopping_carts','shopping_carts.uid','=','checkouts.uid')
         ->get();
 
-        $pdf = \PDF::loadView('bill.pdf', compact('myOrder'));
+        $pdf = \PDF::loadView('bill.pdf', compact('user','myOrder', 'address'));
 
         return $pdf->download('checkout.pdf');
     }
