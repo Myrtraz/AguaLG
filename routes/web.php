@@ -37,8 +37,8 @@ Route::get('/pdf', 'MailController@showpdf')->name('showpdf');
 
 //administrador
 Route::get('/admin', 'LoginController@index')->name('login');
+Route::post('/loggedIn', 'LoginController@loggedIn')->name('loggedIn');
 Route::group([], function (){
-    Route::post('/loggedIn', 'LoginController@loggedIn')->name('loggedIn');
     Route::get('/home', 'DashboardController@index')->name('dashboard');
     Route::get('/create', 'AdminController@index')->name('create');
     Route::post('/created', 'AdminController@createProduct')->name('created');
