@@ -34,6 +34,7 @@ class ProductCategoryController extends Controller
     public function getProduct($name)
     {
         $product = Product::where('name', $name)->first();
-        return view('products.product', compact('name', 'product'));
+        $filters = Product::where('type', 'filtro')->paginate(4);
+        return view('products.product', compact('name', 'product', 'filters'));
     }
 }

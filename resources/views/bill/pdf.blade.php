@@ -186,7 +186,7 @@
                 <tr>
                     <td class="td">
                         <div class="">
-                            <p class=" text-title">Nombre de Empresa</p>
+                            <p class=" text-title">Agualogic</p>
                             <p class="text-subtitle">Dirección</p>
                             <p class="text-subtitle">{{ env('MAIL_FROM_ADDRESS') }}</p>
                             <p class="text-subtitle">Teléfono</p>

@@ -34,13 +34,14 @@ class ShoppingCartController extends Controller
 
     public function shoppingCart(Request $request)
     {
+        $filters = Product::where('type', 'filtro')->paginate(4);
         $pid = $request->pid;
         $qty = $request->qty;
         $uid = hash('ripemd160', $request->session()->token());
 
         $products = shoppingCart::where('uid', $uid)->get();
         $subtotal =  DB::table('shopping_carts')->where('uid', $uid)->sum(DB::raw('shopping_carts.product_price * shopping_carts.product_qty'));
-        return view('cart.shoppingCart', compact('products', 'qty', 'uid', 'pid', 'subtotal'));
+        return view('cart.shoppingCart', compact('products', 'qty', 'uid', 'pid', 'subtotal', 'filters'));
     }
 
     public function removeCart($id)

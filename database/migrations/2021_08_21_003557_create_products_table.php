@@ -17,8 +17,10 @@ class CreateProductsTable extends Migration
             $table->id();
             $table->string('name');
             $table->double('price');
+            $table->integer('stock');
             $table->string('type');
             $table->string('cover');
+            $table->boolean('is_product_on');
             $table->timestamps();
         });
     }
