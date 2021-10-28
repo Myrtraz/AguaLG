@@ -106,9 +106,29 @@
                         <h5>Tambien te puede interesar</h5>
                         <div class="row">
                             @foreach ($filters as $filter)
-                                <div class="col-3" style="width: 50%">
-                                    <a href="{{ route('getProduct', ['name' => $filter->name]) }}"
-                                        class="text-decoration-none">
+                                @if ($filter->stock != 0)
+                                    @if ($filter->is_product_on == true)
+                                        <div class="col-3" style="width: 50%">
+                                            <a href="{{ route('getProduct', ['name' => $filter->name]) }}"
+                                                class="text-decoration-none">
+                                                <div>
+                                                    <div
+                                                        style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                                                        <div>
+                                                            <img src="{{ $filter->cover }}" width="100%" height="40%"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        style="font-size: 0.8rem !important; color: #666;">${{ $filter->price }}</span>
+                                                    <h2 style="font-size: 0.8rem !important; color: #666;">
+                                                        {{ $filter->name }}</h2>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    @endif
+                                @else
+                                    <div class="col-3" style="width: 50%">
                                         <div>
                                             <div
                                                 style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
@@ -116,13 +136,12 @@
                                                     <img src="{{ $filter->cover }}" width="100%" height="40%" alt="">
                                                 </div>
                                             </div>
-                                            <span
-                                                style="font-size: 0.8rem !important; color: #666;">${{ $filter->price }}</span>
-                                            <h2 style="font-size: 0.8rem !important; color: #666;">{{ $filter->name }}
-                                            </h2>
+                                            <div class="mb-2"></div>
+                                            <span class="badge badge-warning mx-3"
+                                                style="font-size: 0.8rem !important; color: #666;">No hay stocks</span>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                @endif
                             @endforeach
                         </div>
                         <div class="mb-3"></div>
@@ -218,23 +237,46 @@
                         <h5>Tambien te puede interesar</h5>
                         <div class="row">
                             @foreach ($filters as $filter)
-                                <div class="col-3">
-                                    <a href="{{ route('getProduct', ['name' => $filter->name]) }}"
-                                        class="text-decoration-none">
-                                        <div>
-                                            <div
-                                                style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                                @if ($filter->stock != 0)
+                                    @if ($filter->is_product_on == true)
+                                        <div class="col-3">
+                                            <a href="{{ route('getProduct', ['name' => $filter->name]) }}"
+                                                class="text-decoration-none">
                                                 <div>
-                                                    <img src="{{ $filter->cover }}" width="100%" height="40%" alt="">
+                                                    <div
+                                                        style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                                                        <div>
+                                                            <img src="{{ $filter->cover }}" width="100%" height="40%"
+                                                                alt="">
+                                                        </div>
+                                                    </div>
+                                                    <span
+                                                        style="font-size: 0.8rem !important; color: #666;">${{ $filter->price }}</span>
+                                                    <h2 style="font-size: 0.8rem !important; color: #666;">
+                                                        {{ $filter->name }}</h2>
                                                 </div>
-                                            </div>
-                                            <span
-                                                style="font-size: 0.8rem !important; color: #666;">${{ $filter->price }}</span>
-                                            <h2 style="font-size: 0.8rem !important; color: #666;">{{ $filter->name }}
-                                            </h2>
+                                            </a>
                                         </div>
-                                    </a>
-                                </div>
+                                    @endif
+                                @else
+                                    @if ($filter->is_product_on == true)
+                                        <div class="col-3">
+                                            <div>
+                                                <div
+                                                    style="background-color: #fff; height: 30%; width: 100%; border-radius: 20px; box-shadow: 0px 2px 5px rgb(0 0 0 / 26%) !important">
+                                                    <div>
+                                                        <img src="{{ $filter->cover }}" width="100%" height="40%" alt="">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2"></div>
+                                                <span class="badge badge-warning py-2 mx-2"
+                                                    style="font-size: 0.8rem !important; color: #666;">No hay stocks
+                                                    disponibles</span>
+                                            </div>
+                                        </div>
+                                    @endif
+                                @endif
+
                             @endforeach
                         </div>
                         <div class="mb-3"></div>

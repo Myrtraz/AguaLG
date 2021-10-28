@@ -7,6 +7,7 @@ use App\Mail\OrderReceived;
 use App\Models\Checkout;
 use App\Models\ShoppingCart;
 use App\Models\Address;
+use Session;
 use Mail;
 use PDF;
 use DB;
@@ -55,5 +56,11 @@ class MailController extends Controller
         $pdf = \PDF::loadView('bill.pdf', compact('user','myOrder', 'address'));
 
         return $pdf->stream('checkout.pdf');
+    }
+
+    public function closeSession(Request $request)
+    {
+        Session::flush();
+        return redirect()->route('index');
     }
 }

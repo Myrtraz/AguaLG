@@ -30,38 +30,44 @@ class OrderController extends Controller
         $checkout = shoppingCart::where('uid', $uid)->get();
         $qty = $request->qty;
 
-        foreach($checkout as $item) {
-            Checkout::create([
-                'uid' => $uid,
-                'pid' => $pid,
-                'first_name' => $request->first_name,
-                'last_name' => $request->last_name,
-                'document' => $request->document,
-                'email' => $request->email,
-                'phone' => $request->phone,
-                'company_name' => $request->company_name,
-            ]);
-
-            /*
-                Product::where('id', $item->product->id)
-                    ->update([
-                        'stock' => $item->product->stock - $qty
+        if ($request->check != "on") {
+            return redirect()->route('checkout')->with('error','Seleccione el checkbox, para continuar con la orden');
+        } else {
+            foreach($checkout as $item) {
+                //dd();
+                Checkout::create([
+                    'uid' => $uid,
+                    'pid' => $pid,
+                    'first_name' => $request->first_name,
+                    'last_name' => $request->last_name,
+                    'document' => $request->document,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'company_name' => $request->company_name,
                 ]);
-            */
-        }
-
-        ShoppingCart::where('uid', $uid)
-            ->update([
-                'is_ordered' => true
+    
+                
+                
+            
+            }
+    
+            Product::where('id', $item->pid)
+                ->update([
+                    'stock' => $item->products->stock - $qty
+                ]);
+            ShoppingCart::where('uid', $uid)
+                ->update([
+                    'is_ordered' => true
+                ]);
+    
+            $address = Address::create([
+                'uid' => $uid,
+                'street_address' => $request->street_address,
+                'country' => $request->country,
+                'city' => $request->city,
             ]);
-
-        $address = Address::create([
-            'uid' => $uid,
-            'street_address' => $request->street_address,
-            'country' => $request->country,
-            'city' => $request->city,
-        ]);
-
-        return redirect()->route('congratulations', compact('uid'));
+    
+            return redirect()->route('congratulations', compact('uid'));
+        }
     }
 }

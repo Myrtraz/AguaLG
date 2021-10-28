@@ -16,4 +16,9 @@ class ShoppingCart extends Model
         'product_cover',
         'is_ordered'
     ];
+
+    public function products()
+    {
+        return $this->belongsTo('App\Models\Product', 'product_id');
+    }
 }

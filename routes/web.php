@@ -30,6 +30,7 @@ Route::group([], function (){
     Route::get('/checkout', 'OrderController@checkout')->name('checkout');
     Route::post('/create', 'OrderController@order')->name('create');
     Route::get('/congratulations/{uid}', 'MailController@congratulations')->name('congratulations');
+    Route::get('/close', 'MailController@closeSession')->name('close');
 });
 
 Route::name('printPDF')->get('/imprimir/{uid}', 'MailController@printPDF');
